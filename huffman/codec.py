@@ -1,5 +1,7 @@
 
-symboles=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," ",".",",",";","'"]
+symboles=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V",\
+    "W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",\
+    "u","v","w","x","y","z"," ",".",",",";","'"]
 
 
 def table_occurence(text:str):
@@ -71,7 +73,8 @@ class Codec():
     def encode(self,text):
         res=""
         for letter in text:
-            res+=self.find_code("",self.tree,letter)#On appelle la fonction récursive find_code qui retourne le code associé à la lettre "letter",pour chaque lettre
+            res+=self.find_code("",self.tree,letter)#On appelle la fonction récursive find_code 
+            #qui retourne le code associé à la lettre "letter",pour chaque lettre
         return res
         
     def decode(self,code):
