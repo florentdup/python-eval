@@ -82,7 +82,9 @@ class Codec():
         index=0
         res=""
         while index<len(code):
-            while len(current_node.key)!=1:  #Tant qu'on est pas à une extrémité de l'abre on continue de la parcourir (on effectue une seule comparaison au lieu de deux si on cherchait à verifier qu'il n'y a pas de sous noeud après celui-ci)
+            while len(current_node.key)!=1:  #Tant qu'on est pas à une extrémité de l'abre,
+                # on continue de le parcourir  (on effectue une seule comparaison au lieu de deux 
+                # si on cherchait à verifier qu'il n'y a pas de sous noeud après celui-ci)
                 if code[index]=="1":
                     current_node=current_node.right_node
                 else:
